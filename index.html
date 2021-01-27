@@ -1,13 +1,12 @@
+<center>
 <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/1_7D5wEk6Hftm11SD1mteUPGCpTEAWM5z96fR7XPoP8A/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
-  First name:<br>
-  <input type="text" name="entry.627506330" id="entry.627506330"><br>
-  Last name:<br>
-  <input type="text" name="entry.11409722" id="entry.627506330">
-  <input type="submit" value="Submit">
+  Phone Number:<br>
+  <input type="text" name="entry.11409722" id="entry.11409722"><br>
+  <input type="submit" value="Submit" onclick="myFunction()">
 </form>
-
+<p id="demo"></p>
 <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
-
+</center>
 <script src="assets/js/jquery.min.js"></script>
 <script type="text/javascript">var submitted=false;</script>
 <script type="text/javascript">
@@ -15,4 +14,8 @@ $('#gform').on('submit', function(e) {
   $('#gform *').fadeOut(2000);
   $('#gform').prepend('Your submission has been processed...');
   });
+  
+function myFunction() {
+  document.getElementById("demo").innerHTML = "<div class='test' style='width:100%;height:100px;background-color:black'>test</div>";
+}
 </script>
