@@ -1,14 +1,14 @@
 <html>
   
   <head>
-    <title>Pino's Pizza Booking Form</title>
+    <title>Pino's Pizza Email Booking Form</title>
   </head>
   <body>
   <center>
 <form name="gform" autocomplete="off" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/1_7D5wEk6Hftm11SD1mteUPGCpTEAWM5z96fR7XPoP8A/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
-  Phone Number:<br>
+  Email:<br>
   <input type="text" name="entry.11409722" id="entry.11409722" style="width: 20vw; background-color:white;border-width:.25vw;border-color:black;font-family: 'Bungee';border-radius:0vw;margin-top:1vh;margin-bottom:1vh;"><br>
-  <input type="submit" value="Submit" onclick="myFunction()" style="background-color:white;border-color:black;font-family: 'Bungee';border-radius:.5vw;">
+  <input type="submit" value="Book Your Feast At Pino's" onclick="bookingintitiated()" style="background-color:white;border-color:black;font-family: 'Bungee';border-radius:.5vw;">
 </form>
 <p id="successmessage"></p>
 <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
@@ -21,7 +21,7 @@ $('#gform').on('submit', function(e) {
   $('#gform').prepend('Your submission has been processed...');
   });
   
-function myFunction() {
+function bookingintitiated() {
   document.getElementById("successmessage").innerHTML = "<div class='test' style='width:auto;height:100px;background-color:silver;position:relative;top:-58vh;'><div class='submissionsuccesstext' style='text-align:center;position:relative;top:30%;margin-left:11%;margin-right:11%;color:black;padding:1vh;background-color:white;'>Thanks for booking a feast at Pinos, your purchase will fund a meal for a Bostonian in need!<br> When you get to Pino's, reply to our text (# 555-555-5555) the color of your table for a change to win a free two topping pizza.</div></div>";
 }
 </script>
@@ -32,6 +32,7 @@ function myFunction() {
 body {
 font-family: 'Bungee';
 }
+
 </style>
   </body>
 </html>
